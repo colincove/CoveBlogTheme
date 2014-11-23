@@ -4,11 +4,14 @@
 }
 body{
 	font-size: 105%;
-	line-height: 1.2em;
+	line-height: 1.7em;
 	font-family: helvetica;
 
 	margin: 0px;
 	padding: 0px;
+}
+p{
+font-size: 0.95em;
 }
 
 *{
@@ -126,7 +129,7 @@ article footer{
 article footer a{
 	font-size: 0.7em;
 }
-article header a{
+article header h1>a {
 	color: inherit;
 	border:none;
 	-webkit-transition: color 0.15s; /* For Safari 3.1 to 6.0 */
@@ -151,6 +154,12 @@ body > footer{
 }
 body > footer img{
 	float: right;
+}
+/*--------------------- Content Header -----------*/
+.post-content header img {
+    width: 100%;
+    height: auto;
+    margin-top: 1.8em;
 }
 /*--------------------- Content Footer -----------*/
 article .post-content{

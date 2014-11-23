@@ -136,7 +136,7 @@ article header a:hover{
 	color: #f39c45;
 }
 
-/*--------------------- Headser -----------*/
+/*--------------------- Header -----------*/
 body > header{
 	width: 100%;
 	height: 3em;
@@ -151,6 +151,11 @@ body > footer{
 }
 body > footer img{
 	float: right;
+}
+/*--------------------- Content Header -----------*/
+.post-content header img {
+width: 100%;
+height: auto;
 }
 /*--------------------- Content Footer -----------*/
 article .post-content{
