@@ -1,6 +1,6 @@
-<article class="col-5of5">
+<article id="post-<?php the_ID(); ?>" class="col-5of5 <?php post_class();?>">
 
-	<section class="post-content col-4of5">
+	<section class="post-content col-4of5"  >
 		<header class="col-4of4">
             <?php
                 if ( is_single() ) :
@@ -40,5 +40,5 @@
             <?php } ?>
 		</footer>
 	</section>
-	<img class="col-1of5" src="img/technical-icon.svg" />
+	<img class="col-1of5" src='<?php echo cove_category_img_src(); ?>' >
 </article>

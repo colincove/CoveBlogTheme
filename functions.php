@@ -1,5 +1,41 @@
 <?php
-add_theme_support( 'post-thumbnails' ); 
+function cove_setup()
+{
+    add_theme_support( 'post-thumbnails' ); 
+    add_theme_support( 'post-formats', array(
+		'aside', 'image', 'link', 'gallery'
+	) );
+    
+    add_action( 'admin_footer', 'catlist2radio' );
+    function catlist2radio(){
+        echo '<script type="text/javascript">';
+        echo 'jQuery("#categorychecklist input, #categorychecklist-pop input, .cat-checklist input")';
+        echo '.each(function(){this.type="radio"})</script>';
+        echo ".first().prop('checked', true);";
+    }
+}
+add_action( 'after_setup_theme', 'cove_setup' );
+
+function cove_category_img_src()
+{
+    if(in_category( 'technical' ))
+    {
+        return get_template_directory_uri()."/img/technical-icon.svg";
+    }
+    else if(in_category( 'asside' ))
+    {
+        return get_template_directory_uri()."/img/opinion-icon.svg"; 
+    }
+    else if(in_category( 'art' ))
+    {
+        return get_template_directory_uri()."/img/sketchbook-icon.svg"; 
+    }
+    else if(in_category( 'writting' ))
+    {
+        return get_template_directory_uri()."/img/sketchbook-icon.svg"; 
+    }
+     return get_template_directory_uri()."/img/sketchbook-icon.svg"; 
+}
 function cove_scripts_basic()
 {
     // Register the script like this for a theme:
