@@ -100,7 +100,7 @@ article ul{
 	line-height: 2.25em;
 	float:left;
 }
-article li{
+article ul li{
 	float: left;
 	margin-right: 1.70em;
 	font-size: 0.7em;
@@ -137,6 +137,63 @@ article header h1>a {
 }
 article header a:hover{
 	color: #f39c45;
+}
+/*--------------------- Comments -----------*/
+#comment
+{
+    font-size: inherit;
+    font-family:inherit;
+}
+#comments
+{
+    border-top: 0.15em solid #000000;
+    margin-top: 3em;
+  
+}
+#respond
+{
+      padding-top: 2em;
+    float: left;
+}
+#commentform > p {
+    float:left;
+}
+.form-submit, .comment-list
+{
+    float:left;
+}
+.comments-title{
+    padding-top: 3em;
+    float: left;
+    font-size: 1.5em;
+    width: 100%;
+   
+}
+.comment-metadata{
+    font-size: 0.75em;
+}
+.comment-form-comment
+{
+    width:100%;
+}
+.form-allowed-tags{
+    font-size: 0.75em;
+    width:100%;
+    
+}
+.form-allowed-tags, .comment-form-comment{
+    min-height: 120px;
+}
+.comment-form-comment label{
+    display:none;
+}
+#reply-title
+{
+    font-size: 1.5em;
+}
+p.logged-in-as{
+    font-size: 0.75em;
+    width: 100%;
 }
 
 /*--------------------- Headser -----------*/

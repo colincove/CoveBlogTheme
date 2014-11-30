@@ -135,7 +135,10 @@ article header a{
 article header a:hover{
 	color: #f39c45;
 }
-
+/*--------------------- Comments -----------*/
+p.logged-in-as {
+    font-size: 0.7em;
+}
 /*--------------------- Header -----------*/
 body > header{
 	width: 100%;

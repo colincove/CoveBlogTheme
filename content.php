@@ -15,30 +15,45 @@
 					<li>
 						<?php cove_posted_on(); ?>
 					</li>
+                    <?php if (get_the_tags($post->ID)) : ?>
 					<li>
 						tags: <?php cove_meta_tags(); ?>
 					</li>
+                    <?php endif; ?>
 					<li>
                         <?php cove_comments(); ?>
-				<!--<a href="index.php">comments (2)</a>-->
 					</li>
 				</ul>
 			</section>
 		<?php 
-            $thumb = get_the_post_thumbnail( $post->ID );
+            if(is_single() || get_post_format( $post->ID ) == "image"):
+            $thumb = get_the_post_thumbnail($post->ID);
             print($thumb);
+            else:
+            $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), full );
+            //print($thumb[0]);
+            if($thumb):
         ?>
+        <div class="featured-img col-3of4" style="background-image: url('<?php echo $thumb[0]; ?>')">
+		  </div>
+            <?php endif;endif; ?>
         </header>
 		<!--<div class="featured-img col-3of4">
 		</div>-->
 		<div class="col-4of4 text-content"> 
 			<?php the_content(""); ?>
-		<div>
+		
 		<footer class="col-4of4">
             <?php if( strpos( $post->post_content , "<!--more-->" ) != false ) { ?>
                 <a href="<?php the_permalink(); ?>">continue reading</a>
             <?php } ?>
 		</footer>
+                    <?php 
+if ( comments_open() || get_comments_number() ) {
+						comments_template();
+					}
+?>
 	</section>
 	<img class="col-1of5" src='<?php echo cove_category_img_src(); ?>' >
+            
 </article>
