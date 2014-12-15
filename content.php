@@ -44,16 +44,14 @@
 			<?php the_content(""); ?>
 		
 		<footer class="col-4of4">
+            
             <?php if( strpos( $post->post_content , "<!--more-->" ) != false ) { ?>
                 <a href="<?php the_permalink(); ?>">continue reading</a>
             <?php } ?>
 		</footer>
-                    <?php 
-if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					}
-?>
+    
 	</section>
 	<img class="col-1of5" src='<?php echo cove_category_img_src(); ?>' >
             
 </article>
+

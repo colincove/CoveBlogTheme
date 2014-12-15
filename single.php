@@ -33,6 +33,16 @@ get_header(); ?>
                          * (where ___ is the post format) and that will be used instead.
                          */
                         get_template_part( 'content', get_post_format() );
+?>
+        <div class = "pagination-single col-4of5">
+            <div><?php previous_post_link('« %link');?></div><div><?php next_post_link('%link »');   ?> </div>
+        </div>
+                        
+        <?php
+                        if ( comments_open() || get_comments_number() ) 
+                        {
+                                 comments_template();
+                        }
 
                     endwhile;
                     // Previous/next post navigation.
@@ -44,11 +54,7 @@ get_header(); ?>
 
                 endif;
             ?>
-        <section class = "pagination-links">
-            <div class = "col-4of5">
-             <?php echo paginate_links( ); ?>
-                </div>
-        </section>
+         
     </section>
 </div>
 <?php

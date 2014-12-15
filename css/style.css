@@ -62,7 +62,35 @@ a:hover{
 	/*border-left: 0.15em solid #e2e2e1;*/
 	border-left: 0.15em solid #000000;
 }
+.alignleft 
+{
+float: left;
+margin-right: 1em;
+}
+.alignright
+{
+float: right;
+margin-right: 1em;
+}
 /* -------------------- Navigation ---------------*/
+form input
+{
+    font-size: 1em;
+}
+.pagination-single > div
+{
+    float:left;
+    margin-right: 2em;
+}
+div.pagination-single
+{
+    float:right;
+}
+.pagination-links > div
+{
+    float:right;
+    border-top: 0.15em solid #000000;
+}
 .blog-nav{
 	margin-top: 3em;
 }
@@ -83,7 +111,7 @@ a:hover{
 	height: 10em;
 }
 /*--------------------- Post Content -----------*/
-article {
+#main-container > article {
 	margin-bottom: 7em;
 }
 article:last-child{
@@ -139,6 +167,10 @@ article header a:hover{
 	color: #f39c45;
 }
 /*--------------------- Comments -----------*/
+ol.children
+{
+    padding-left:2em;
+}
 #comment
 {
     font-size: inherit;
@@ -148,7 +180,7 @@ article header a:hover{
 {
     border-top: 0.15em solid #000000;
     margin-top: 3em;
-  
+    float:right;
 }
 #respond
 {
